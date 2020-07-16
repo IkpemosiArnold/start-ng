@@ -41,24 +41,24 @@ body{
     color:  #24116A;
 }
 .purple-header{
-    font-family: 'Muli', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-weight: 800;
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.4px;
     color:  #24116A;
 }
-.muli-font{
-    font-family: 'Muli', sans-serif;
+.roboto-font{
+    font-family: 'Roboto Condensed', sans-serif;
     font-style: normal;
 }
 .text-block{
-    font-family: 'Muli', sans-serif;
+    font-family: Arial;
     font-style: normal;
     font-weight: normal;
     line-height: 22px;
     letter-spacing: 0.3px;
-    color: #C4C4C4;
+    color: #7E7E7E;
 }
 
 .purple-btn{
@@ -82,17 +82,28 @@ body{
 .normal{
     font-style: normal;
 }
+#main-nav{
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+}
 .navbar-custom{
-    background-color: rgba(36, 17, 106, 0.06);
+    background-color: #E4EDF2;   
+  
 }
 .navbar-custom .navbar-nav .nav-item .nav-link {
-    color: #373F41;
-    font-family: 'Muli', sans-serif;
+    color: black;
+    font-family: Arial;
     font-style: normal;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.2px;
+}
+#navbar-logo{
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .side-img{
@@ -102,8 +113,11 @@ body{
 .top-margin{
     margin-top: 10%;
 }
+.small-margin{
+    margin-top: 5%;
+}
 .small-pad{
-    padding-top: 7%;
+    padding-top: 5%;
 }
 /*------------ Hero Section ----------------*/
 #hero-section{
@@ -115,9 +129,7 @@ body{
 #hero-grid{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(380px,1fr));
-    align-items: center;
     justify-content: center;
-    margin-top: 70px;
     padding-left: 10%;
     padding-right: 10%;
 }
@@ -172,64 +184,49 @@ body{
 }
 
 /*--------- Partners Section  -------------*/
-#partners-slide{
-    width:80%;
-    text-align: center;
-    overflow: hidden;
+#partners-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 5%;
+  }
+  .about-timeline::before{
+    content: "";
+    position: relative;
+    margin-top: 5%;  
+    width: 3px;
+    height: 100%;
+    top: 0;
+    left: 20%;
+    margin-left: -2px;
+    background: #00b0bd;
+    z-index: -1;
   }
   
-  .slides {
-    display: flex;  
-    overflow-x: auto;
-    scroll-snap-type: x mandatory; 
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
- 
-  }
-  .slides > div {
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    width: auto;
-    height: auto;
-    margin-right: 50px;
-    transform-origin: center center;
-    transform: scale(1);
-    transition: transform 0.5s;
-    position: relative;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 100px;
-  }
 
 /*------- Footer Section ---------*/
 #footer-section{
-    background: rgba(36, 17, 106, 0.06);
+    background: #E4EDF2;
     padding-top: 5%;
+    font-family: Arial;
     font-style: normal;
-    font-weight: 600;
+    font-weight: normal;
     font-size: 14px;
     line-height: 18px;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.3px;
     color: #373F41;
 }
 
 .footer-link{
     text-decoration: none;
     color: #373F41;
-    padding: 0;
 }
-.social-list li{
-    
-    list-style: none;
-    display: inline;
+.footer-item{
     padding: 10px 10px 10px 0;
 }
-.list-inline li{
-    display: inline;
-    padding: 10px 10px 10px 0;
-}
+
 /*-------Media-Queries---------*/
 @media screen and (max-width: 540px) {
    
@@ -264,9 +261,6 @@ body{
 @media screen and (min-width: 992px){
     #main-nav{
         padding-right: 5%;
-        padding-left: 4.5%;
-        padding-top: 10px;
-        padding-bottom: 10px;
     }
     .nav-item{
         padding-top: 0;
@@ -279,10 +273,7 @@ body{
 }
 @media screen and (min-width: 541px) and (max-width: 992px){
     #main-nav{
-        padding-right: 2.5%;
-        padding-left: 2.5%;
-        padding-top: 10px;
-    
+        padding-right: 2.5%;    
     }
     
         #hero-section{
@@ -295,8 +286,5 @@ body{
 @media screen and (min-width: 993px) and (max-width: 1240px){
     #main-nav{
         padding-right: 5.5%;
-        padding-left: 5.5%;
-        padding-top: 10px;
-        padding-bottom: 10px;
     }
 }
