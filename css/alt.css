@@ -349,7 +349,10 @@ body{
     .skill-item{
         padding: 0px;
     }
-    
+    .abt-text{
+    padding-left: 5%;
+    padding-right: 5%;
+    }
    .about-timeline{
        padding-top:15%;
    }
