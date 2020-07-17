@@ -156,11 +156,7 @@ body{
     padding-right: 10%;
     margin-top: 4%;
 }
-#about-list{
-    list-style: none;
-    display: inline-block;
-    width: 100%;
-}
+
 .about-timeline::after{
     
     display: block;
@@ -337,6 +333,45 @@ body{
     .template-header {
         margin-bottom: -12%;
     }
+    .about-timeline{
+        padding-top: 10%;
+        max-height: 400px;
+    }
+    .about-timeline::after{
+        width: 3vw;
+        height:350px;
+        left: 50%;
+        bottom: 45vh;
+      }
+      #item-1::after{
+        left: -3%;
+        top:5px;
+        height: 6px;
+        width: 50%;
+    }
+    #item-2::after{
+        left: -10%;
+        top:5px;
+        height: 6px;
+        width: 90%;
+    }
+    #item-3::after{
+        left: -3%;
+        top:5px;
+        height: 6px;
+        width: 50%;
+    }
+    #item-1,#item-2,#item-3{
+        font-size: 16px;
+      
+    }
+    #t-item-1,#t-item-3{
+        padding-left: 8%;
+    }
+    .align-right{
+        padding-left: 55%;
+    }
+    
 }
 @media screen and (min-width: 992px){
     #main-nav{
