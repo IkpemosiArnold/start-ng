@@ -27,6 +27,10 @@ body{
     align-items: center;
     justify-content: center;
 }
+.center-self{
+    justify-self: center;
+    align-self: center;
+}
 .img-center{
     display:block;
     margin: 0 auto;
@@ -116,6 +120,9 @@ body{
 .small-margin{
     margin-top: 5%;
 }
+.ten-top-pad{
+    padding-top: 10%;
+}
 .small-pad{
     padding-top: 5%;
 }
@@ -144,7 +151,6 @@ body{
 #about-start-grid{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-    align-items: center;
     justify-content: center;
     padding-left: 10%;
     padding-right: 10%;
@@ -155,20 +161,58 @@ body{
     display: inline-block;
     width: 100%;
 }
-#about-list li{
-    padding: 2% 2% 0 2%;
+.about-timeline::after{
     
-}
-.about-list-div{
-    display: inline-block;
-    width: max-content;
-    border: 1px solid #FFFFFF;
+    display: block;
+    content: " ";
+    width: 2vw;
+    height: 50vh;
+    position: relative;
+    left: 35%;
+    bottom: 40vh;
     background: #FFFFFF;
-    padding: 10px;
-    box-shadow: 0px 4px 8px rgba(218, 217, 212, 0.2);
- 
-
+    border: 1px solid #24116A;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+  #item-1::after{
+    display: block;
+    content: "";
+    position: relative;
+    left: 0;
+    top:5px;
+    background-color: black;
+    height: 6px;
+    width: 40%;
+    z-index: -1;
 }
+#item-2::after{
+    display: block;
+    content: "";
+    position: relative;
+    left: -10%;
+    top:5px;
+    background-color: black;
+    height: 6px;
+    width: 80%;
+    z-index: -1;
+}
+#item-3::after{
+    display: block;
+    content: "";
+    position: relative;
+    left: 0;
+    top:5px;
+    background-color: black;
+    height: 6px;
+    width: 40%;
+    z-index: -1;
+}
+  .align-right{
+      padding-left:45%;
+  }
+
+
 /*------ Skills Section-------*/
 #skills-section{
     background-image: url(../images/left-ellipse.svg);
@@ -184,27 +228,63 @@ body{
 }
 
 /*--------- Partners Section  -------------*/
-#partners-grid{
+.partners-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
     justify-content: center;
+    align-items: center;
     padding-left: 5%;
     padding-right: 5%;
     margin-top: 5%;
   }
-  .about-timeline::before{
-    content: "";
-    position: relative;
-    margin-top: 5%;  
-    width: 3px;
-    height: 100%;
-    top: 0;
-    left: 20%;
-    margin-left: -2px;
-    background: #00b0bd;
-    z-index: -1;
-  }
-  
+ 
+/*---------Courses Section-------------*/
+#courses-section{
+    background-image: url(../images/hero-ellipse.svg), url(../images/left-ellipse.svg);
+    background-position: left 100% top 23% , right 100% bottom 1%;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: scroll, scroll;
+}
+#courses-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,400px));
+    justify-content: center;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.text-left{
+    text-align: left;
+}
+#modules-list{
+    padding-inline-start: 0;
+}
+#modules-list li{
+    padding: 2% 0 0 0;
+    list-style: none;
+       
+}
+/*------ FAQ --------*/
+#faq-section{
+    background-image: url(../images/hero-ellipse.svg), url(../images/left-ellipse.svg);
+    background-position: left 100% top 0% , right 100% bottom 1%;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: scroll, scroll;
+}
+.accordion > .card{
+    background-color: #E4EDF2;
+    border: 0;
+    border-radius: 0;
+}
+.accordion > .card > .btn{
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+    color: #000000;
+}
 
 /*------- Footer Section ---------*/
 #footer-section{
@@ -224,7 +304,7 @@ body{
     color: #373F41;
 }
 .footer-item{
-    padding: 10px 10px 10px 0;
+    padding: 5%;
 }
 
 /*-------Media-Queries---------*/
