@@ -29,7 +29,7 @@ body{
 }
 .center-self{
     justify-self: center;
-    align-self: center;
+    align-self: start;
 }
 .img-center{
     display:block;
@@ -150,19 +150,22 @@ body{
 /*------- Project Details section-----*/
 #about-start-grid{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
     justify-content: center;
     padding-left: 10%;
     padding-right: 10%;
     margin-top: 4%;
 }
-
+.about-timeline{
+    padding-top: 10%;
+    max-height: 400px;
+}
 .about-timeline::after{
     
     display: block;
     content: " ";
     width: 2vw;
-    height: 50vh;
+    height: 350px;
     position: relative;
     left: 35%;
     bottom: 40vh;
@@ -249,6 +252,9 @@ body{
     padding-left: 5%;
     padding-right: 5%;
 }
+#courses-grid > figure{
+    max-height: 600px;
+} 
 .text-left{
     text-align: left;
 }
@@ -333,15 +339,14 @@ body{
     .template-header {
         margin-bottom: -12%;
     }
-    .about-timeline{
-        padding-top: 10%;
-        max-height: 400px;
-    }
+   .about-timeline{
+       padding-top:15%;
+   }
     .about-timeline::after{
         width: 3vw;
         height:350px;
         left: 50%;
-        bottom: 45vh;
+        bottom: 50vh;
       }
       #item-1::after{
         left: -3%;
@@ -402,4 +407,25 @@ body{
     #main-nav{
         padding-right: 5.5%;
     }
+    
+}
+@media screen and (min-width:1439px){
+    #skills-grid{
+        display: grid;
+        grid-template-columns: repeat(3,200px);
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media screen and (min-width:1777px){
+    #courses-grid{
+        display: grid;
+        grid-template-columns: repeat(3,400px);
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
 }
