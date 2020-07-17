@@ -260,6 +260,7 @@ body{
 }
 #courses-grid > figure{
     max-height: 600px;
+    max-width: 255px;
 } 
 .text-left{
     text-align: left;
@@ -400,6 +401,13 @@ body{
         padding-right: 20%;
     }
    
+}
+@media screen and (max-width: 992px){
+
+    .nav-item{
+        padding-top: 0;
+        padding-bottom: 20px;    
+    }
 }
 @media screen and (min-width: 541px) and (max-width: 992px){
     #main-nav{
